@@ -1,0 +1,215 @@
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: 'bebas_neueregular';
+  src: url('fonts/bebasneue_regular-webfont.woff2') format('woff2'),
+    url('fonts/bebasneue_regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'source_sans_prolight';
+  src: url('fonts/sourcesanspro-light-webfont.woff2') format('woff2'),
+    url('fonts/sourcesanspro-light-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.main-wrapper {
+  width: 375px;
+  height: 667px;
+  background-image: url('images/background-mobile.png');
+  background-position: 25% 8.75%;
+  background-size: 100%;
+}
+
+.grid {
+  display: grid;
+}
+
+/*content-wrapper start */
+.content-wrapper {
+  grid-template-rows: 52px 140px 64px 210px 40px 1fr;
+}
+
+.content__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 0.5em;
+}
+
+.content__header {
+  grid-row: 2/3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.content__title {
+  font-family: 'bebas_neueregular';
+  color: #ffffff;
+  font-size: 2.8em;
+  word-spacing: 0.01em;
+  font-weight: bolder;
+}
+
+.content__title--one {
+  padding-left: 0.09em;
+}
+
+.content__title--two {
+  padding-left: 0.03em;
+  word-spacing: 0.03em;
+  line-height: 1.08em;
+}
+
+.content__title--three {
+  padding-left: 0.1em;
+  line-height: 1.08em;
+}
+
+.content__description {
+  grid-row: 3/4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content__description > p {
+  font-family: 'source_sans_prolight';
+  color: #ffffff;
+  font-size: 0.94em;
+  padding-bottom: 1.4em;
+  word-spacing: 0.03em;
+  letter-spacing: 0.01em;
+}
+/* content-wrapper end */
+
+/* email-wrapper start */
+.email-wrapper {
+  position: relative;
+  margin: auto;
+  grid-row: 4/5;
+  width: 264px;
+  height: 210px;
+  z-index: 1;
+  grid-template-rows: 55px 24px 43px 19px 14px 53px;
+}
+
+.email-wrapper::after {
+  content: '';
+  position: absolute;
+  background-color: white;
+  opacity: 0.6;
+  z-index: -1;
+  border-radius: 12px;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+.email__header {
+  font-family: 'bebas_neueregular';
+  font-weight: 1000;
+  font-size: 2.2em;
+  color: #333333;
+  word-spacing: 0.01em;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.email__header--one {
+  grid-row: 1/2;
+}
+
+.email__header--two {
+  grid-row: 3/4;
+  letter-spacing: 0.02em;
+  word-spacing: 0.02em;
+}
+
+.email__description {
+  font-family: 'source_sans_prolight';
+  font-weight: 800;
+  font-size: 0.85em;
+}
+
+.email__description--one {
+  grid-row: 2/3;
+  letter-spacing: 0.02em;
+  word-spacing: 0.03em;
+  opacity: 0.8;
+}
+
+.email__description--two {
+  grid-row: 4/5;
+  letter-spacing: 0.03em;
+  opacity: 0.8;
+}
+
+.email__description--price {
+  font-family: 'Open Sans', sans-serif;
+  grid-row: 5/6;
+  font-size: 0.57em;
+  word-spacing: 0.01em;
+  opacity: 0.7;
+}
+
+.email__description--price > s {
+  padding-right: 0.1em;
+}
+
+.email__button {
+  grid-row: 6/-1;
+  align-items: flex-start;
+  margin-top: 0.75em;
+}
+
+.email__button > button {
+  width: 164px;
+  height: 21px;
+  background-color: white;
+  font-family: 'Open Sans', sans-serif;
+  border: 0.07em solid #afadad;
+  font-size: 0.45em;
+  font-weight: 600;
+  vertical-align: top;
+  border-radius: 3px;
+  color: #525252;
+  opacity: 0.8;
+  padding-bottom: 0.55em;
+}
+/* email-wrapper end */
+
+/* promo-wrapper start */
+.promo-wrapper {
+  grid-row: 5/6;
+}
+
+.promo__description {
+  font-family: 'source_sans_prolight';
+  color: #f1efd9;
+  font-size: 0.9em;
+  margin-top: 1em;
+  letter-spacing: 0.025em;
+  word-spacing: 0.06em;
+}
+/* promo-wrapper end */
